@@ -1,38 +1,160 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+* {
+  font-family: 'Poppins',sans-serif;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: url("https://www.hitbullseye.com/images/school.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+
+.app {
+  background-color: rgba(14, 5, 88, 0.863);  
+ backdrop-filter: blur(20px);
+  width: 50rem;
+  margin-top: 10vh;
+  /* min-height: 200px; */ 
+  height: 350px; 
+  border-radius: 15px;
+  padding: 20px;
+  /* box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75); */
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  margin-top: 9vh;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+  margin-top: 3vh;
+}
+
+.question-count {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.answer-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  margin-top: 3vh;
+}
+
+.option_button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: transparent;
+  border-radius: 15px;
+  display: flex;
+  padding: 8px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 5px solid #234668;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.correct {
+  background-color: #2f922f;
 }
 
-@keyframes App-logo-spin {
+.incorrect {
+  background-color: #ff3333;
+}
+
+.option_button:hover {
+  background-color: #7b0b92;
+}
+
+.option_button:focus {
+  outline: none;
+}
+
+.option_button svg {
+  margin-right: 5px;
+}
+.submit_button {
+  padding: 10px 12px;
+  width: 40%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ff4da6;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #ff4da6;
+  cursor: pointer; 
+  box-shadow: 0 0 10px #ff4da6;
+  transition: all 0.3s ease;
+}
+.submit_button:hover {
+  background: #ff4da6;
+  color: #252d4a;
+}
+.option_button:focus {
+  background-color: rgba(172, 255, 47, 0.803);
+}
+/* .heading
+{
+  color: #2f922f;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 10vh;
+} */
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  /* background: rgba(14, 5, 88, 0.863); ;
+  backdrop-filter: blur(20px); */
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
+  
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
+.center {
+  display:block;
+  margin: auto;
 }
